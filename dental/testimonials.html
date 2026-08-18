@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=reviews-ui-2">
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -81,62 +81,167 @@
     </header>
 
     <main id="main-content">
-<div class="subpage-header">
+    <div class="subpage-header reviews-header">
         <div class="container">
             <h1>Patient Reviews & Smile Gallery</h1>
-            <p>Real transformations and verified feedback from our patients.</p>
+            <p>Verified patient stories, treatment outcomes, and smile transformations from our Bangalore studio.</p>
             <div class="breadcrumb">
                 <a href="index.html">Home</a> <i class="fa-solid fa-angle-right"></i> <span>Reviews & Gallery</span>
             </div>
         </div>
     </div>
 
+    <section class="reviews-overview">
+        <div class="container reviews-overview-grid">
+            <div class="rating-panel">
+                <span class="section-subtitle">PATIENT TRUST</span>
+                <div class="rating-score">5.0</div>
+                <div class="stars rating-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>Based on 1,200+ clinic reviews and post-treatment follow-ups.</p>
+            </div>
+
+            <div class="review-stat-strip">
+                <div class="review-stat">
+                    <strong>98%</strong>
+                    <span>Would recommend us</span>
+                </div>
+                <div class="review-stat">
+                    <strong>4.9/5</strong>
+                    <span>Comfort rating</span>
+                </div>
+                <div class="review-stat">
+                    <strong>15k+</strong>
+                    <span>Smiles treated</span>
+                </div>
+            </div>
+
+            <div class="featured-review-card">
+                <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                <p>"The consultation felt transparent from the first scan. I knew the timeline, cost, and what my smile would look like before treatment started."</p>
+                <div class="patient-info">
+                    <strong>Nisha Menon</strong>
+                    <span>Digital Smile Design Patient</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Before & After Gallery -->
-    <section class="section-padding">
+    <section class="section-padding smile-gallery-section">
         <div class="container">
             <div class="section-header text-center">
                 <span class="section-subtitle">SMILE TRANSFORMATIONS</span>
                 <h2 class="section-title">Before & After Results</h2>
+                <p class="section-description">Browse representative treatment journeys planned with digital imaging, minimally invasive care, and clear follow-up protocols.</p>
             </div>
 
             <div class="gallery-tabs">
-                <button class="gallery-tab active" data-gallery="all">All Transformations</button>
-                <button class="gallery-tab" data-gallery="veneers">Porcelain Veneers</button>
-                <button class="gallery-tab" data-gallery="invisalign">Invisalign</button>
-                <button class="gallery-tab" data-gallery="implants">Dental Implants</button>
+                <button class="gallery-tab active" data-gallery="all"><i class="fa-solid fa-table-cells-large"></i> All</button>
+                <button class="gallery-tab" data-gallery="veneers"><i class="fa-solid fa-wand-magic-sparkles"></i> Veneers</button>
+                <button class="gallery-tab" data-gallery="invisalign"><i class="fa-solid fa-teeth-open"></i> Invisalign</button>
+                <button class="gallery-tab" data-gallery="implants"><i class="fa-solid fa-tooth"></i> Implants</button>
             </div>
 
             <div class="ba-grid">
                 <div class="ba-card" data-gallery-type="veneers">
-                    <div class="ba-images">
-                        <div class="ba-before"><span class="ba-label">BEFORE</span><span>Chipped & Stained</span></div>
-                        <div class="ba-after"><span class="ba-label">AFTER</span><span>8 Porcelain Veneers</span></div>
+                    <div class="ba-slider-card" style="--reveal: 50%;">
+                        <div class="ba-stage">
+                            <div class="ba-panel ba-before-panel">
+                                <span class="ba-label">Before</span>
+                                <i class="fa-solid fa-face-meh"></i>
+                                <span>Chipped & Stained</span>
+                            </div>
+                            <div class="ba-panel ba-after-panel">
+                                <span class="ba-label">After</span>
+                                <i class="fa-solid fa-face-smile-beam"></i>
+                                <span>8 Porcelain Veneers</span>
+                            </div>
+                            <div class="ba-divider" aria-hidden="true"><span><i class="fa-solid fa-arrows-left-right"></i></span></div>
+                            <input class="ba-range" type="range" min="12" max="88" value="50" aria-label="Reveal veneer transformation">
+                        </div>
                     </div>
                     <div class="ba-info">
+                        <span class="case-tag">2 visits</span>
                         <h4>Full Smile Restyle</h4>
-                        <p>Corrected discoloration and minor alignment gaps in 2 visits.</p>
+                        <p>Corrected discoloration, chipped edges, and minor alignment gaps with a conservative prep plan.</p>
+                        <button class="btn-link open-booking-modal" data-service="Veneers & Smile Design">Plan My Smile <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
 
                 <div class="ba-card" data-gallery-type="invisalign">
-                    <div class="ba-images">
-                        <div class="ba-before"><span class="ba-label">BEFORE</span><span>Deep Crowding</span></div>
-                        <div class="ba-after"><span class="ba-label">AFTER</span><span>7 Months Alignment</span></div>
+                    <div class="ba-slider-card" style="--reveal: 50%;">
+                        <div class="ba-stage">
+                            <div class="ba-panel ba-before-panel">
+                                <span class="ba-label">Before</span>
+                                <i class="fa-solid fa-teeth"></i>
+                                <span>Deep Crowding</span>
+                            </div>
+                            <div class="ba-panel ba-after-panel">
+                                <span class="ba-label">After</span>
+                                <i class="fa-solid fa-align-center"></i>
+                                <span>7 Months Alignment</span>
+                            </div>
+                            <div class="ba-divider" aria-hidden="true"><span><i class="fa-solid fa-arrows-left-right"></i></span></div>
+                            <input class="ba-range" type="range" min="12" max="88" value="50" aria-label="Reveal Invisalign transformation">
+                        </div>
                     </div>
                     <div class="ba-info">
+                        <span class="case-tag">7 months</span>
                         <h4>Adult Invisalign Alignment</h4>
-                        <p>Straightened arches seamlessly without traditional wire braces.</p>
+                        <p>Straightened arches discreetly with removable aligners and monthly progress checks.</p>
+                        <button class="btn-link open-booking-modal" data-service="Invisalign">Check Eligibility <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
 
                 <div class="ba-card" data-gallery-type="implants">
-                    <div class="ba-images">
-                        <div class="ba-before"><span class="ba-label">BEFORE</span><span>Missing Molar</span></div>
-                        <div class="ba-after"><span class="ba-label">AFTER</span><span>Titanium Implant</span></div>
+                    <div class="ba-slider-card" style="--reveal: 50%;">
+                        <div class="ba-stage">
+                            <div class="ba-panel ba-before-panel">
+                                <span class="ba-label">Before</span>
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <span>Missing Molar</span>
+                            </div>
+                            <div class="ba-panel ba-after-panel">
+                                <span class="ba-label">After</span>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Titanium Implant</span>
+                            </div>
+                            <div class="ba-divider" aria-hidden="true"><span><i class="fa-solid fa-arrows-left-right"></i></span></div>
+                            <input class="ba-range" type="range" min="12" max="88" value="50" aria-label="Reveal implant transformation">
+                        </div>
                     </div>
                     <div class="ba-info">
+                        <span class="case-tag">3D guided</span>
                         <h4>3D Guided Implant</h4>
-                        <p>Restored full chewing function and natural crown appearance.</p>
+                        <p>Restored chewing function with guided placement and a natural ceramic crown.</p>
+                        <button class="btn-link open-booking-modal" data-service="Dental Implants">Restore My Tooth <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="ba-card" data-gallery-type="veneers">
+                    <div class="ba-slider-card" style="--reveal: 50%;">
+                        <div class="ba-stage">
+                            <div class="ba-panel ba-before-panel">
+                                <span class="ba-label">Before</span>
+                                <i class="fa-solid fa-droplet"></i>
+                                <span>Uneven Shade</span>
+                            </div>
+                            <div class="ba-panel ba-after-panel">
+                                <span class="ba-label">After</span>
+                                <i class="fa-solid fa-star"></i>
+                                <span>Natural Brightness</span>
+                            </div>
+                            <div class="ba-divider" aria-hidden="true"><span><i class="fa-solid fa-arrows-left-right"></i></span></div>
+                            <input class="ba-range" type="range" min="12" max="88" value="50" aria-label="Reveal veneer shade transformation">
+                        </div>
+                    </div>
+                    <div class="ba-info">
+                        <span class="case-tag">Smile preview</span>
+                        <h4>Natural Veneer Upgrade</h4>
+                        <p>Matched tooth proportions and shade to the patient's facial features before final bonding.</p>
+                        <button class="btn-link open-booking-modal" data-service="Veneers & Smile Design">Preview Options <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -144,10 +249,28 @@
     </section>
 
     <!-- Testimonials List -->
-    <section class="section-padding bg-light">
+    <section class="section-padding bg-light patient-stories-section">
         <div class="container">
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
+            <div class="section-header text-center">
+                <span class="section-subtitle">PATIENT STORIES</span>
+                <h2 class="section-title">Read Reviews by Treatment</h2>
+                <p class="section-description">Use the filters to focus on the treatment you are considering.</p>
+            </div>
+
+            <div class="review-filters" aria-label="Filter patient reviews">
+                <button class="review-filter active" data-review-filter="all">All Reviews</button>
+                <button class="review-filter" data-review-filter="cosmetic">Cosmetic</button>
+                <button class="review-filter" data-review-filter="implant">Implants</button>
+                <button class="review-filter" data-review-filter="ortho">Aligners</button>
+                <button class="review-filter" data-review-filter="hygiene">Hygiene</button>
+            </div>
+
+            <div class="testimonials-grid enhanced-testimonials">
+                <div class="testimonial-card" data-review-type="cosmetic">
+                    <div class="review-card-top">
+                        <span class="review-avatar">AR</span>
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                    </div>
                     <div class="stars">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
@@ -158,7 +281,11 @@
                     </div>
                 </div>
 
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-review-type="implant">
+                    <div class="review-card-top">
+                        <span class="review-avatar">RK</span>
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                    </div>
                     <div class="stars">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
@@ -169,7 +296,11 @@
                     </div>
                 </div>
 
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-review-type="ortho">
+                    <div class="review-card-top">
+                        <span class="review-avatar">PS</span>
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                    </div>
                     <div class="stars">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
@@ -179,7 +310,65 @@
                         <span>Invisalign Patient</span>
                     </div>
                 </div>
+
+                <div class="testimonial-card" data-review-type="hygiene">
+                    <div class="review-card-top">
+                        <span class="review-avatar">VM</span>
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"The hygienist explained every step and gave me a simple home-care plan. My sensitivity reduced within a week, and the cleaning felt gentle throughout."</p>
+                    <div class="patient-info">
+                        <strong>Vikram Mehta</strong>
+                        <span>Wellness & Hygiene Patient</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-review-type="cosmetic">
+                    <div class="review-card-top">
+                        <span class="review-avatar">NM</span>
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="review-text">"The smile preview made the whole decision easier. The final shade looks bright but still natural, exactly what I wanted for work and family photos."</p>
+                    <div class="patient-info">
+                        <strong>Nisha Menon</strong>
+                        <span>Digital Smile Design Patient</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-review-type="implant">
+                    <div class="review-card-top">
+                        <span class="review-avatar">SK</span>
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"I delayed replacing my tooth for years because I was nervous. The guided implant was quicker than expected and the follow-up calls were very reassuring."</p>
+                    <div class="patient-info">
+                        <strong>Sanjay Kulkarni</strong>
+                        <span>Single Tooth Implant Patient</span>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section class="reviews-cta-section">
+        <div class="container reviews-cta">
+            <div>
+                <span class="section-subtitle">READY FOR YOUR STORY?</span>
+                <h2>Start with a transparent consultation.</h2>
+                <p>Meet a specialist, review your scans, compare treatment options, and leave with a clear plan before you commit.</p>
+            </div>
+            <button class="btn btn-gold btn-lg open-booking-modal">
+                <i class="fa-regular fa-calendar-check"></i> Book Consultation
+            </button>
         </div>
     </section>
     </main>
@@ -371,6 +560,6 @@
     </div>
 
     <div class="toast-container" id="toast-container"></div>
-    <script src="script.js"></script>
+    <script src="js/script.js?v=reviews-ui-2"></script>
 </body>
 </html>

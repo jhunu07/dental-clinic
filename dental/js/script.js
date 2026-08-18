@@ -405,7 +405,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       8. Newsletter Subscription Form
+       8. Reviews Page Filters
+       ========================================================================== */
+    const galleryTabs = document.querySelectorAll('.gallery-tab');
+    const galleryCards = document.querySelectorAll('.ba-card');
+    const beforeAfterRanges = document.querySelectorAll('.ba-range');
+
+    beforeAfterRanges.forEach(range => {
+        const sliderCard = range.closest('.ba-slider-card');
+        if (!sliderCard) return;
+
+        const updateReveal = () => {
+            sliderCard.style.setProperty('--reveal', `${range.value}%`);
+        };
+
+        range.addEventListener('input', updateReveal);
+        updateReveal();
+    });
+
+    galleryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetGallery = tab.getAttribute('data-gallery');
+
+            galleryTabs.forEach(item => item.classList.remove('active'));
+            tab.classList.add('active');
+
+            galleryCards.forEach(card => {
+                const cardGallery = card.getAttribute('data-gallery-type');
+                card.classList.toggle('is-hidden', targetGallery !== 'all' && cardGallery !== targetGallery);
+            });
+        });
+    });
+
+    const reviewFilters = document.querySelectorAll('.review-filter');
+    const reviewCards = document.querySelectorAll('.testimonial-card[data-review-type]');
+
+    reviewFilters.forEach(filter => {
+        filter.addEventListener('click', () => {
+            const reviewType = filter.getAttribute('data-review-filter');
+
+            reviewFilters.forEach(item => item.classList.remove('active'));
+            filter.classList.add('active');
+
+            reviewCards.forEach(card => {
+                const cardType = card.getAttribute('data-review-type');
+                card.classList.toggle('is-hidden', reviewType !== 'all' && cardType !== reviewType);
+            });
+        });
+    });
+
+    /* ==========================================================================
+       9. Newsletter Subscription Form
        ========================================================================== */
     const newsletterForm = id('newsletter-form');
     if (newsletterForm) {
@@ -417,7 +467,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       9. Toast Notification Utility
+       10. Toast Notification Utility
        ========================================================================== */
     function showToast(message, type = 'info') {
         let toastContainer = id('toast-container');
